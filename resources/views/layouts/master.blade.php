@@ -29,7 +29,7 @@
                             <ul class="dropdown-menu">
                                 <li> <a class="dropdown-item"  href="{{ url('/listerSejours') }}">Lister Séjours</a></li>
                                 <li> <a class="dropdown-item" href="{{ url('/ajouterSejour') }}">Ajouter</a> </li>
-                                <li> <a class="dropdown-item" href="{{ url('/affSejour') }}">Affichage la liste des sejours</a> </li>
+                                <li> <a class="dropdown-item" href="{{ url('/afficher') }}">Affichage la liste des sejours</a> </li>
                             </ul>
                         </li>
                     </div>

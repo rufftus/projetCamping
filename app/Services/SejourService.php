@@ -53,4 +53,18 @@ class SejourService
         }
     }
 
+    public function rechercherSejours()
+    {
+        try {
+            $sejours = Sejour::query()
+                ->select('NumSej', 'NomCli', 'NumEmpl', 'DatedebSej', 'DateFinSej', 'NbPersonnes')
+                ->join('client', 'sejour.NumCli', '=', 'Client.NumCli')
+                ->get();
+            return $sejours;
+        } catch (QueryException $exception) {
+            $userMessage = "Impossible d'accéder à la base de données.";
+            throw new UserException($userMessage, $exception->getMessage(), $exception->getCode());
+        }
+    }
+
 }

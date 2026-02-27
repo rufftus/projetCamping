@@ -35,7 +35,7 @@ Route::get('/listerSejours', [SejourController::class, 'listSejours']);
  * Ajout Séjour
  */
 Route::get('/afficher', [SejourController::class, 'affSejour'])->name('affSejour');
-Route::post('/afficher', [SejourController::class, 'rechResult'])->name('rechSejour');
+Route::post('/afficher', [SejourController::class, 'rechSejour'])->name('rechSejour');
 
 //get ajout
 Route::get('/ajouterSejour', [SejourController::class, 'addSejour']);

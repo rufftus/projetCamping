@@ -114,4 +114,20 @@ class SejourController extends Controller
         }
     }
 
+    public function rechResult(Request $request)
+    {
+        try
+        {
+            $texte=$request->input('texte');
+
+            $service=new SejourService();
+            $sejours=$service->rechercherSejours($texte);
+
+            return view ('sejour.listerSejours', compact('sejours'));
+        }
+        catch (Exception $exception) {
+            return view('error', compact('exception'));
+        }
+    }
+
 }
