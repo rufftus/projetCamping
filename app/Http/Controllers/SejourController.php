@@ -114,7 +114,7 @@ class SejourController extends Controller
         }
     }
 
-    public function rechResult(Request $request)
+    public function rechSejour(Request $request)
     {
         try
         {
