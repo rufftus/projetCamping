@@ -105,4 +105,13 @@ class SejourController extends Controller
         }
     }
 
+    public function affSejour()
+    {
+        try{
+            return view ('sejour.rechercherSejour');
+        } catch (Exception $exception) {
+            return view('error', compact('exception'));
+        }
+    }
+
 }
